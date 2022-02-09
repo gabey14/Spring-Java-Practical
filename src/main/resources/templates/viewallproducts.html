@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Products</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+  </head>
+  <body>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">PID</th>
+      <th scope="col">PNAME</th>
+      <th scope="col">PRICE</th>
+      <th scope="col">DELETE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="product:${allproducts}">
+      <td th:text="${product.pid}"></td>
+      <td th:text="${product.pname}"></td >
+      <td th:text="${product.price}"></td>
+    <!--  <td><a th:href="@{/product/${product.pid}}" class="btn btn-danger">Delete</a></td> -->
+        <td><a th:href="@{/deleteproduct/{pid}(pid=${product.pid})}" class="btn btn-danger">Delete</a></td>
+    </tr>
+  </tbody>
+</table>
+  </body>
+</html>
