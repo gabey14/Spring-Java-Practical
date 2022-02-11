@@ -81,9 +81,10 @@ public class ProductController {
     
 //    Update Code Assignment by Sir
     
-    @GetMapping("/updateform")
-    public String updateProduct(Model model) {
-    	Product product = new Product();
+    @GetMapping("/updateform/{pid}")
+    public String updateProduct(@PathVariable Integer pid, Model model) {
+    	
+    	Product product = service.getProductById(pid);
     	model.addAttribute("product",product);
     	return "updateform";
     }

@@ -46,6 +46,8 @@ public class ProductService {
 			existproduct.setPid(product.getPid());
 			existproduct.setPrice(product.getPrice());
 			repository.save(existproduct);	
+		} else {
+			repository.save(product);	
 		}
 	}
 	

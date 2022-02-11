@@ -11,15 +11,15 @@
 <form th:action="@{/updateproduct}" th:object="${product}" method="POST"> 
    <div class="form-group">
     <label for="productId" class="mx-3 my-3">Product Id</label>
-    <input type="number" th:field="*{pid}"  class="form-control col-2 mx-3 my-3" placeholder="Enter product id" required/>
+    <input type="number" th:field="*{pid}"  class="form-control col-2 mx-3 my-3" placeholder="Enter product id" th:value="${product.pid}" required/>
   </div>
   <div class="form-group">
     <label for="productName" class="mx-3 my-3">Product Name</label>
-    <input type="text" th:field="*{pname}"  class="form-control col-2 mx-3 my-3" placeholder="Enter product name" required/>
+    <input type="text" th:field="*{pname}"  class="form-control col-2 mx-3 my-3" placeholder="Enter product name" th:value="${product.pname}" required/>
   </div>
   <div class="form-group">
     <label for="price" class="mx-3 my-3">Product Price</label>
-    <input type="number" th:field="*{price}" class="form-control col-2 mx-3 my-3" placeholder="Enter price" required/>
+    <input type="number" th:field="*{price}" class="form-control col-2 mx-3 my-3" placeholder="Enter price" th:value="${product.price}" required/>
   </div>
   <button type="submit" class="btn btn-primary mx-3 my-3">Submit</button>
 </form>
