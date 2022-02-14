@@ -24,7 +24,6 @@ public class ProductController {
     @PostMapping("/products")
         public List<Product> addProducts(@RequestBody List<Product> products){
             return service.saveProducts(products);
-
     }
 
     @GetMapping("/products/{pid}")

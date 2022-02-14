@@ -24,7 +24,7 @@
       <td th:text="${product.pname}"></td >
       <td th:text="${product.price}"></td>
     <!--  <td><a th:href="@{/product/${product.pid}}" class="btn btn-danger">Delete</a></td> -->
-    <td><a th:href="@{/updateform/{pid}(pid=${product.pid})}" class="btn btn-success">UPDATE</a></td>
+    <td><a th:href="@{/updateform/{pid}(pid=${product.pid})}" class="btn btn-success">Update</a></td>
         <td><a th:href="@{/deleteproduct/{pid}(pid=${product.pid})}" class="btn btn-danger">Delete</a></td>
     </tr>
   </tbody>

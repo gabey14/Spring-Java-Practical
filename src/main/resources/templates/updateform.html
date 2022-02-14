@@ -10,8 +10,8 @@
   <body>
 <form th:action="@{/updateproduct}" th:object="${product}" method="POST"> 
    <div class="form-group">
-    <label for="productId" class="mx-3 my-3">Product Id</label>
-    <input type="number" th:field="*{pid}"  class="form-control col-2 mx-3 my-3" placeholder="Enter product id" th:value="${product.pid}" required/>
+    <label for="productId" class="mx-3 my-3">Product Id</label> 
+    <input type="number" th:field="*{pid}"  class="form-control col-2 mx-3 my-3" placeholder="Enter product id" th:value="${product.pid}" disabled required/>
   </div>
   <div class="form-group">
     <label for="productName" class="mx-3 my-3">Product Name</label>
