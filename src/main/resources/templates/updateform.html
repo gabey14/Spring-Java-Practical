@@ -1,27 +1,49 @@
 <!DOCTYPE html>
 <html xmlns:th="https://www.thymeleaf.org">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Update Products</title>
-    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
   </head>
   <body>
-<form th:action="@{/updateproduct}" th:object="${product}" method="POST"> 
-   <div class="form-group">
-    <label for="productId" class="mx-3 my-3">Product Id</label> 
-    <input type="number" th:field="*{pid}"  class="form-control col-2 mx-3 my-3" placeholder="Enter product id" th:value="${product.pid}" disabled required/>
-  </div>
-  <div class="form-group">
-    <label for="productName" class="mx-3 my-3">Product Name</label>
-    <input type="text" th:field="*{pname}"  class="form-control col-2 mx-3 my-3" placeholder="Enter product name" th:value="${product.pname}" required/>
-  </div>
-  <div class="form-group">
-    <label for="price" class="mx-3 my-3">Product Price</label>
-    <input type="number" th:field="*{price}" class="form-control col-2 mx-3 my-3" placeholder="Enter price" th:value="${product.price}" required/>
-  </div>
-  <button type="submit" class="btn btn-primary mx-3 my-3">Submit</button>
-</form>
+    <form th:action="@{/updateproduct}" th:object="${product}" method="POST">
+      <div class="form-group">
+        <label for="productId" class="mx-3 my-3">Product Id</label>
+        <input
+          type="number"
+          th:field="*{pid}"
+          class="form-control col-2 mx-3 my-3"
+          placeholder="Enter product id"
+          th:value="${product.pid}"
+          readonly
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="productName" class="mx-3 my-3">Product Name</label>
+        <input
+          type="text"
+          th:field="*{pname}"
+          class="form-control col-2 mx-3 my-3"
+          placeholder="Enter product name"
+          th:value="${product.pname}"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="price" class="mx-3 my-3">Product Price</label>
+        <input
+          type="number"
+          th:field="*{price}"
+          class="form-control col-2 mx-3 my-3"
+          placeholder="Enter price"
+          th:value="${product.price}"
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-primary mx-3 my-3">Submit</button>
+    </form>
   </body>
 </html>
